@@ -1,10 +1,11 @@
 
 import './App.css';
+import Menu from './Menu'
 
 function App() {
   return (
     <div className="app-container">
-      React 7.2 Rendering List
+      <Menu />
     </div>
   );
 }
