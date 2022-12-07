@@ -1,5 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default class MallDirectory extends React.Component {
     state = {
@@ -13,7 +16,8 @@ export default class MallDirectory extends React.Component {
             "Coffee Beans",
             "Uniqo",
             "Don Don Donki",
-            "Giants Supermarket"
+            "Giants Supermarket",
+            "Sephora"
         ]
     };
 
@@ -22,6 +26,17 @@ export default class MallDirectory extends React.Component {
             <React.Fragment>
                 <h1>Generic Mall Shopping Directory</h1>
                 <h2>Shops</h2>
+                {this.state.shops.map(function (e) {
+                    return (
+                        <Container>
+                            <Row>
+                                <Col md={4}>
+                                    {e}
+                                </Col>
+                            </Row>
+                        </Container>
+                    )
+                })}
                 <h2>Events</h2>
                 {this.state.events.map(function (e) {
                     return (
